@@ -6,7 +6,7 @@
 
 ## デモ
 
-[GitHub Pagesでプレイする](https://あなたのユーザー名.github.io/リポジトリ名/)
+[GitHub Pagesでプレイする](https://hiroe28.github.io/002_colorgenerator/)
 
 ## 特徴
 

@@ -103,7 +103,7 @@
   </style>
 </head>
 <body>
-  <h1>楽しいタイダイ風カラージェネレーター</h1>
+  <h1>楽しいカラージェネレーター</h1>
   <h2>クリック＆ドラッグして模様を描いてみよう！</h2>
   <div class="controls">
     <button id="resetBtn">リセット</button>
@@ -468,10 +468,24 @@
       background(255);
     }
     
-    function saveImage() {
-      // キャンバスを画像として保存
-      saveCanvas(canvas, 'タイダイ模様', 'png');
-    }
+
+	function saveImage() {
+	  // 現在の日時を取得
+	  let now = new Date();
+
+	  // 日時をファイル名用に整形（例：2025-03-26_14-30-00）
+	  let timestamp = now.getFullYear() + "-" +
+	                  String(now.getMonth() + 1).padStart(2, '0') + "-" +
+	                  String(now.getDate()).padStart(2, '0') + "_" +
+	                  String(now.getHours()).padStart(2, '0') + "-" +
+	                  String(now.getMinutes()).padStart(2, '0') + "-" +
+	                  String(now.getSeconds()).padStart(2, '0');
+
+	  // ファイル名に日時を使用
+	  saveCanvas(canvas, '模様_' + timestamp, 'png');
+	}
+
+
     
     function generateRandom() {
       // ランダムに図形を生成
